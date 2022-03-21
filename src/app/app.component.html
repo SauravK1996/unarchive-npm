@@ -1,0 +1,20 @@
+<div style="text-align: center;">
+  <h1>Welcolme to {{title}}</h1>
+  <div>
+    <label for="file">Choose File</label>
+    <input type="file" id="file" (change)="handleFileInput($event)" />
+  </div>
+  <div>
+    <p>File name : {{filename}}</p>
+    <p>File size : {{filesize}}</p>
+    <p>File type : {{filetype}}</p>
+  </div>
+
+  <div>
+    <h2>File List : </h2>
+    <div class="card card-block" *ngFor="let file of filelistToUI">
+      <p class="card-text">{{file}}</p>
+    </div>
+  </div>
+
+</div>
